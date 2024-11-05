@@ -1,15 +1,10 @@
 import { Text, View } from "react-native";
+import FishList from "./FishList";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+    <View>
+      <FishList />
     </View>
   );
 }
