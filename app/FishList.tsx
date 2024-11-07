@@ -1,4 +1,5 @@
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableHighlight } from "react-native";
+import { green } from "react-native-reanimated/lib/typescript/reanimated2/Colors";
 
 export default function FishList() {
   const fishes = [
@@ -22,11 +23,27 @@ export default function FishList() {
             </Text>
           </View>
         ))}
+      <TouchableHighlight underlayColor='white'>
+        <View style={styles.button}>
+          <Text style={styles.buttonText}>Press Me!</Text>
+        </View>
+      </TouchableHighlight>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  button: {
+    alignItems: "center",
+    width: 100,
+    height: 30,
+    backgroundColor: "#32a852",
+    borderRadius: 25,
+    padding: 5,
+  },
+  buttonText: {
+    alignItems: "center",
+  },
   fishContainer: {
     flex: 1,
     alignItems: "center",
@@ -36,12 +53,12 @@ const styles = StyleSheet.create({
   aSingleFish: {
     flex: 2,
     flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 50,
     width: "80%",
     padding: 5,
     margin: 5,
-    alignItems: "center",
-    justifyContent: "space-evenly",
     shadowColor: "black",
   },
   fishCardStatStyling: {
